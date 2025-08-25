@@ -1,0 +1,88 @@
+[gd_scene load_steps=2 format=3 uid="uid://ci8t5k1xlh5gn"]
+
+[ext_resource type="Script" path="res://main_menu/main_menu_button.gd" id="1_bwpgx"]
+
+[node name="main_menu" type="Node2D"]
+script = ExtResource("1_bwpgx")
+
+[node name="host_container" type="VBoxContainer" parent="."]
+offset_left = 424.0
+offset_top = 103.0
+offset_right = 680.0
+offset_bottom = 202.0
+
+[node name="Button_host" type="Button" parent="host_container"]
+layout_mode = 2
+text = "Захостить сервер"
+
+[node name="host_port_ui_box" type="HBoxContainer" parent="host_container"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="host_container/host_port_ui_box"]
+layout_mode = 2
+text = "host port:"
+
+[node name="host_port" type="LineEdit" parent="host_container/host_port_ui_box"]
+layout_mode = 2
+text = "8080"
+
+[node name="join_container" type="VBoxContainer" parent="."]
+offset_left = 425.0
+offset_top = 191.0
+offset_right = 682.0
+offset_bottom = 282.0
+
+[node name="Button_join" type="Button" parent="join_container"]
+layout_mode = 2
+text = "Зайти на сервер"
+
+[node name="IP_ui_box" type="HBoxContainer" parent="join_container"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="join_container/IP_ui_box"]
+layout_mode = 2
+text = "ip:"
+
+[node name="ip" type="LineEdit" parent="join_container/IP_ui_box"]
+layout_mode = 2
+text = "127.0.0.1"
+expand_to_text_length = true
+
+[node name="port_ui_box" type="HBoxContainer" parent="join_container"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="join_container/port_ui_box"]
+layout_mode = 2
+text = "port:"
+
+[node name="port" type="LineEdit" parent="join_container/port_ui_box"]
+layout_mode = 2
+text = "8080"
+expand_to_text_length = true
+
+[node name="profil_container" type="VBoxContainer" parent="."]
+offset_left = 746.0
+offset_top = 142.0
+offset_right = 866.0
+offset_bottom = 206.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Button_user_data_update" type="Button" parent="profil_container"]
+layout_mode = 2
+text = "сохранить изминения"
+
+[node name="name_box" type="HBoxContainer" parent="profil_container"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="profil_container/name_box"]
+layout_mode = 2
+text = "name:"
+
+[node name="LineEdit" type="LineEdit" parent="profil_container/name_box"]
+layout_mode = 2
+expand_to_text_length = true
+
+[connection signal="pressed" from="host_container/Button_host" to="." method="_on_button_host_pressed"]
+[connection signal="pressed" from="join_container/Button_join" to="." method="_on_button_join_pressed"]
+[connection signal="pressed" from="profil_container/Button_user_data_update" to="." method="_on_button_user_data_update_pressed"]

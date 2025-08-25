@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://crt0hiey7ui6f"]
+
+[ext_resource type="Texture2D" uid="uid://jscgjp8xosym" path="res://icon.svg" id="1_3ptqg"]
+
+[node name="Test" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_3ptqg")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 235.0
+offset_top = 7.0
+offset_right = 809.0
+offset_bottom = 482.0
+text = "бебебе бубубу"

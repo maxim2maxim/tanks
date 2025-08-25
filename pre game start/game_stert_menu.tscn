@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cqkdpu4y0m58q"]
+
+[ext_resource type="Script" path="res://pre game start/game_start_menu_skript.gd" id="1_rtxpv"]
+
+[node name="game_stert_menu" type="Node2D"]
+script = ExtResource("1_rtxpv")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(180, 253)
+
+[node name="Marker2D2" type="Marker2D" parent="."]
+position = Vector2(560, 396)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(581, 316)
